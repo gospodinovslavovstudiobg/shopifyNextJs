@@ -2,8 +2,8 @@
 import {getProductsInCollection} from "../lib/shopify"
 import ProductList from "../components/ProductList"
 
-export default function Home ({ products }){
- 
+export default function Home ({ products }: any){
+  console.log(products)
   return (
     <div>
       <ProductList products={products} />
