@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
+
 import {getProductsInCollection} from "../lib/shopify"
 import ProductList from "../components/ProductList"
 
-const Home: NextPage = ({ products }) => {
+export default function Home ({ products }){
  
   return (
     <div>
@@ -11,13 +11,13 @@ const Home: NextPage = ({ products }) => {
   )
 }
 
-export default Home
+
 
 export async function getStaticProps() {
 
   const products = await getProductsInCollection()
   
   return {
-    props:{products}
+    props:{ products }
   }
 }
